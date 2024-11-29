@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{a4wide}
+
+\title{Application of Graph Neural Networks to Mitigate Popularity Bias in Content Recommendations}
+%\author{not specified, not necessary here}
+\date{}
+\begin{document}
+\maketitle
+In this project, we explore the use of Graph Neural Networks (GNNs) to address the issue of popularity bias in content recommendations.
+Popularity bias issue leads to the over-representation of popular items, thereby reducing the visibility of less popular but potentially relevant
+content. By considering the ability of GNNs to capture complex user-item interactions, we aim to develop a graph-based approach that provides
+fair exposure to all items regardless of their popularity. 
+
+\section{Introduction}
+Table~\ref{tab:intro_comparative} presents a comparative analysis of GNN-based approaches aimed at mitigating popularity bias in content recommendations.
+The table summarizes the strengths and weaknesses of various methods, highlighting the need for a novel solution.
+
+\begin{table}[!htbp]
+\label{tab:intro_comparative}
+\caption{Comparative analysis of recent approaches to mitigate popularity bias in content recommendations.}
+\begin{tabular}{p{5cm}|p{5cm}|p{5cm}}
+	Solution & Strengths & Weakness \\
+	\hline
+	BiGNN: A Bilateral-Branch Graph Neural Network~\cite{Kou2022} & 
+	Leverages a bilateral-branch framework to handle both long-tail and popular items, improving fairness & 
+	Requires complex optimization and may not generalize well to all recommendation tasks \\
+	\hline
+	MixGCF: Graph Neural Network-based Recommender Systems~\cite{Huang2021} & 
+	Improves GNN-based training by combining graph convolution with user-item interactions, reducing bias & 
+	High computational cost and may overfit on sparse or imbalanced data \\
+	\hline
+	XSimGCL: Simple Graph Contrastive Learning for Recommendation~\cite{Yu2023} & 
+	Utilizes a very simple contrastive learning approach that significantly reduces model complexity & 
+	Decreases performance on more complex and larger datasets due to its simplicity \\
+\end{tabular}
+\end{table}
+ 
+ The section references contain the full list, collected for this project. 
+\nocite{*} % Remove this to keep the cited referernces only
+
+\bibliographystyle{unsrt}
+\bibliography{Kirill-Shevchenko-theArt}
+\end{document}

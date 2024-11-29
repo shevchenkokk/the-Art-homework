@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{a4wide}
+
+\title{Application of Graph Neural Networks to Mitigate Popularity Bias in Content Recommendations}
+%\author{not specified, not necessary here}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Literature Review}
+
+\textbf{BiGNN: A Bilateral-Branch Graph Neural Network to Solve Popularity Bias in Recommendation} by Kou et al. introduces a two-branch GNN framework
+that effectively distinguishes between popular and long-tail items, improving recommendation fairness, especially in datasets
+with imbalanced popularity distributions.
+
+\textbf{MixGCF: An Improved Training Method for Graph Neural Network-based Recommender Systems} by Huang et al. focuses on enhancing the GNN training
+process by incorporating user-item interaction information, offering an effective solution for reducing popularity bias but at the cost of increased
+computational complexity.
+
+\textbf{XSimGCL: Towards Extremely Simple Graph Contrastive Learning for Recommendation} by Yu et al. simplifies graph contrastive learning methods,
+making them more computationally efficient, although it may struggle with capturing complex user-item relationships in large-scale datasets.
+
+\textbf{SimGCL: Graph Contrastive Learning by Finding Homophily in Heterophily} by Liu et al. presents a method for handling both homophilic and
+heterophilic relationships in graphs, making it suitable for datasets with diverse types of user-item interactions.
+
+\textbf{An Explicitly Weighted GCN Aggregator based on Temporal and Popularity Features for Recommendation} by Li et al. proposes an explicit
+weighting mechanism in GCNs to account for both temporal and popularity-based features, which helps reduce bias in dynamic recommendation environments.
+
+\textbf{Addressing Popularity Bias in Recommender Systems: An Exploration of Self-Supervised Learning Models} by Klimashevskaia et al. explores
+self-supervised learning approaches for mitigating popularity bias, offering a promising direction for improving exploration in recommendations
+without explicit supervision.
+
+\textbf{A Survey on Popularity Bias in Recommender Systems} by Klimashevskaia et al. provides an extensive survey of methods addressing
+popularity bias, summarizing existing solutions and highlighting challenges for future research in this area.
+
+\textbf{Graph Neural Networks in Recommender Systems: A Survey} by Wu et al. offers a comprehensive survey of GNN applications in recommender systems,
+providing valuable insights into the theoretical foundations and practical applications of GNNs for addressing bias in recommendations.
+
+\end{document}
