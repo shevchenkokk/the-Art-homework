@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{a4wide}
+\usepackage{hyperref}
+
+\begin{document}
+
+\paragraph{Title:} Application of Graph Neural Networks to Mitigate Popularity Bias in Content Recommendations
+
+\paragraph{Abstract:} In this project, we explore the use of Graph Neural Networks (GNNs) to address the issue of popularity bias in
+content recommendations. Popularity bias issue leads to the over-representation of popular items, thereby reducing the visibility of
+less popular but potentially relevant content. Such skewed item exposure not only undermines user satisfaction by limiting diversity
+and coverage, but also hinders the discovery of niche items that could better align with individual user preferences. By considering
+the ability of GNNs to capture complex user-item interaction patterns, we aim to develop a graph-based approach that provides fair
+exposure to all items regardless of their popularity. We formulate this as an optimization problem balancing traditional accuracy
+metrics with fairness- and diversity-oriented objectives, ensuring that improvements in mitigating popularity bias do not come at the
+cost of overall recommendation quality.
+
+\paragraph{Datasets:} The computational experiment will be conducted on three datasets to ensure robustness, scalability and reproducibility.
+All datasets are open-source and come preprocessed or easily configurable for ready-to-model usage.
+\begin{enumerate}
+    \item \textbf{MovieLens 32M}:
+    a widely used movie-rating dataset with approximately 32 million user-item interactions.
+    This is a typical long-tail dataset that can provide a strong baseline for our approach.
+    Available at: \href{https://grouplens.org/datasets/movielens/32m/}{GroupLens}.
+    \item \textbf{OTTO}:
+    a dataset originating from a Kaggle challenge, it represents user sessions and interactions with online retail products,
+    including views, cart additions, and purchases.
+    Available at: \href{https://www.kaggle.com/competitions/otto-recommender-system}{Kaggle}.
+    \item \textbf{Amazon Books}:
+    a dataset that provides detailed information on books, including titles, authors, genres, ratings, reviews and purchase statistics.
+    It is frequently used in analyzing the phenomenon of popularity bias.
+    Available at: \href{https://nijianmo.github.io/amazon/index.html}{Amazon Review Data}.
+    \item \textbf{Last.FM}:
+    this dataset contains social networking, tagging, and music artist listening information from Last.FM online music system.
+    Available at: \href{https://grouplens.org/datasets/hetrec-2011/}{GroupLens}.
+\end{enumerate}
+
+\paragraph{References:}  Papers with a fast intro and the basic solution to compare.
+\begin{enumerate}
+\item \textbf{The formulation of the problem}:
+<<A Survey on Popularity Bias in Recommender Systems>>~\cite{Klimashevskaia2024}  
+\item \textbf{A baseline and new results}:
+<<LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation>>~\cite{Huang2021}.
+\item \textbf{Some fast introduction}:
+<<XSimGCL: Towards Extremely Simple Graph Contrastive Learning for Recommendation>>~\cite{Yu2023}.
+\end{enumerate}
+
+\paragraph{Basic solution:} LightGCN model that demonstrates excellent results in the accuracy of recommendations, but poorly takes into account the popularity bias.
+The code of the authors' solution is available at the link: \href{https://github.com/kuandeng/LightGCN}{https://github.com/kuandeng/LightGCN}.
+
+\paragraph{Authors:} Kirill Shevchenko, Nikita Zelinskiy
+
+\bibliographystyle{unsrt}
+\bibliography{Kirill-Shevchenko-theArt}
+\end{document}
