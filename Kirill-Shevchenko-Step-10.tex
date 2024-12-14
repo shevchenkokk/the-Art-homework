@@ -1,0 +1,84 @@
+\documentclass[10pt,pdf,hyperref={unicode}]{beamer}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[page number]
+% Set it for the internal PhD thesis defence to reduce number of slides
+%\setbeamersize{text margin left=0.5em, text margin right=0.5em}
+
+\usepackage[utf8]{inputenc}
+%\usepackage[english, russian]{babel}
+\usepackage{bm}
+\usepackage{multirow}
+\usepackage{ragged2e}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{subfig}
+\usepackage{amsmath,amssymb}
+\usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{comment}
+\usepackage[all]{xy}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows}
+\tikzstyle{name} = [parameters]
+\definecolor{name}{rgb}{0.5,0.5,0.5}
+
+% colors
+\definecolor{darkgreen}{rgb}{0.0, 0.2, 0.13}
+\definecolor{darkcyan}{rgb}{0.0, 0.55, 0.55}
+
+%----------------------------------------------------------------------------------------------------------
+
+\title{ Put the title of your thesis \\ here}
+%\author{Name Surname}
+%\institute[]{}
+%\date{2024}
+
+%---------------------------------------------------------------------------------------------------------
+\begin{document}
+
+
+\setcounter{page}{2}%remove here for the title
+%----------------------------------------------------------------------------------------------------------
+\begin{frame}{Application of Graph Neural Networks to Mitigate Popularity Bias in Content Recommendations}
+    Recommender systems often overemphasize popular items, reducing diversity and limiting exposure to less popular but relevant content.
+
+    \begin{block}{The problem}
+        How can we leverage GNNs to address the popularity bias in content recommendations ensuring overall recommendation quality
+        is not compromised?
+    \end{block}
+
+    \begin{block}{The method}
+        FairGNN – a novel framework that integrates a Pareto-optimal approach to balance recommendation accuracy with fairness and diversity.
+    \end{block}
+
+    \begin{block}{The solution}
+        \begin{enumerate}[1]
+            \item Develop FairGNN through dual-branch processing and contrastive learning.
+            \item Apply Pareto optimization for multi-criteria balancing.
+        \end{enumerate}
+    \end{block}
+\end{frame}
+%----------------------------------------------------------------------------------------------------------
+\begin{frame}{Pareto Analysis of FairGNN and Baselines}
+
+The plot shows the trade-off between Precision and Fairness, highlighting Pareto-optimal models. 
+
+The error: $\scriptstyle{\mathbf{E} = \min_{i \in \text{Pareto}} \sqrt{(\mathbf{P} - \mathbf{P_i})^2 + (\mathbf{F} - \mathbf{F_i})^2}}$.
+
+\begin{columns}
+    \begin{column}{0.3\textwidth}
+        \begin{enumerate}[1]
+            \item Models with similar Precision values can significantly differ in Fairness and vice versa.
+            \item Achieving a balance between metrics is an indication of well convergence.
+        \end{enumerate}
+    \end{column}
+    \begin{column}{0.8\textwidth}
+	    \includegraphics[width=1\textwidth]{multi_dataset_pareto_comparison}      
+    \end{column}
+\end{columns}
+
+\bigskip
+
+FairGNN balances accuracy and fairness, providing robust performance in mitigating popularity bias.
+\end{frame}
+\end{document}
